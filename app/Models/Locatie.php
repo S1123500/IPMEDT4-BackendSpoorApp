@@ -10,5 +10,6 @@ class Locatie extends Model
     
     protected $table = "locatie";
 
+    public $timestamps = false;
     
 }

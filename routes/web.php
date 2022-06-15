@@ -14,5 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('form');
 });
+
+Route::get('/insert','App\Http\Controllers\InsertController@insert');
+Route::post('/create','App\Http\Controllers\InsertController@create');
