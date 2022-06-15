@@ -12,4 +12,10 @@ class SpelerController extends Controller
 
         return $speler;
     }
+
+    public function index(){
+        $speler = Speler::all();
+
+        return $speler;
+    }
 }

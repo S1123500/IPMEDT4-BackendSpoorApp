@@ -14,6 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/locatie/{name}','\App\Http\Controllers\LocatieController@show');
+Route::get('/locaties','\App\Http\Controllers\LocatieController@index');
+Route::get('/spelers','\App\Http\Controllers\SpelerController@index');
 
+// individuele route show
+Route::get('/locatie/{name}','\App\Http\Controllers\LocatieController@show');
 Route::get('/speler/{name}','\App\Http\Controllers\SpelerController@show');

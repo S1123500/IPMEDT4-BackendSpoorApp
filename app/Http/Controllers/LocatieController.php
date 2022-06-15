@@ -12,6 +12,12 @@ class LocatieController extends Controller
 
         return $locatie;
     }
+
+    public function index(){
+        $locatie = Locatie::all();
+
+        return $locatie;
+    }
 }
 
 // toon: naam, beschrijving, foto, coordinaten
