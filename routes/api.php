@@ -20,3 +20,11 @@ Route::get('/spelers','\App\Http\Controllers\SpelerController@index');
 // individuele route show
 Route::get('/locatie/{name}','\App\Http\Controllers\LocatieController@show');
 Route::get('/speler/{name}','\App\Http\Controllers\SpelerController@show');
+
+//create
+Route::get('/', function () {
+    return view('form');
+});
+
+Route::get('/insert','App\Http\Controllers\InsertController@insert');
+Route::post('/create','App\Http\Controllers\InsertController@create');
