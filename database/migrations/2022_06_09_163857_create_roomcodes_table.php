@@ -15,6 +15,7 @@ class CreateRoomcodesTable extends Migration
     {
         Schema::create('roomcodes', function (Blueprint $table) {
             $table->integer('roomcode');
+            // $table->string('locatie-id-list');
         });
     }
 

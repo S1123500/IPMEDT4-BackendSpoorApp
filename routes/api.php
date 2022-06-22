@@ -28,3 +28,7 @@ Route::get('/', function () {
 
 Route::get('/insert','App\Http\Controllers\InsertController@insert');
 Route::post('/create','App\Http\Controllers\InsertController@create');
+
+Route::get('image/{filename}','App\Http\Controllers\PhotoController@image');
+
+Route::get('/roomcode','App\Http\Controllers\RoomcodeController@show');

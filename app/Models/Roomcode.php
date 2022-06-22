@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Roomcode extends Model
 {
-
+    public $timestamps = false;
 
     protected $table = 'roomcodes';
 }

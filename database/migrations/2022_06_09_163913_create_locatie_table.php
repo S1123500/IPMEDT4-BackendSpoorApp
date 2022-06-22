@@ -16,9 +16,8 @@ class CreateLocatieTable extends Migration
         Schema::create('locatie', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('coordinaten');
+            $table->json('coordinaten');
             $table->string('beschrijving');
-            $table->string('foto');
             $table->boolean('gehaald')->default(0);
         });
     }

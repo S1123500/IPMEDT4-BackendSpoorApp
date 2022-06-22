@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use DB;
+use \App\Models\Locatie;
 
 class LocatieTableSeeder extends Seeder
 {
@@ -18,19 +19,33 @@ class LocatieTableSeeder extends Seeder
 
     public function run()
     {
-        DB::table('locatie')->insert([
-            "name" => 'Happy Days',
-            "coordinaten" => '1',
-            "beschrijving" => 'happy days den haag, willem de zwijgerlaan',
-            "foto"=> '/img/happy days.jpg',
+        
+        Locatie::create([
+            "name" => 'Dranklokaal 1650',
+            "coordinaten" => [52.158307646738685, 4.488973611814642],
+            "beschrijving" => 'hoofdkantoor syntax, dranklokaal:',
+            
+        ]);
+
+        Locatie::create([
+            "name" => 'Lazarus',
+            "coordinaten" => [52.16376252522057, 4.485961198480929],
+            "beschrijving" => 'Rock Cafe, bespeel hier een muziekinstrument',
+        ]);
+
+        Locatie::create([
+            "name" => 'Cafe de Keyzer',
+            "coordinaten" => [52.156074843175844, 4.486179982979343],
+            "beschrijving" => 'Lievelingsbar van muziekgezelschap Sempre Crescendo.',
         ]);
         
-        DB::table('locatie')->insert([
-            "name" => 'Dranklokaal 1650',
-            "coordinaten" => '2',
-            "beschrijving" => 'hoofdkantoor syntax, dranklokaal',
-            "foto"=> '/img/dranklokaal1650.jpg',
+        Locatie::create([
+            "name" => 'De Vergulde Kruik',
+            "coordinaten" => [52.1617434418649, 4.486421013661588],
+            "beschrijving" => 'Makkelijk te bereiken, met een grote bar.',
         ]);
-    
+        
+
+
     }
 }
