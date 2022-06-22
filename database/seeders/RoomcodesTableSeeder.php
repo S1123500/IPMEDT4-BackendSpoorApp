@@ -15,7 +15,8 @@ class RoomcodesTableSeeder extends Seeder
     public function run()
     {
         DB::table('roomcodes')->insert([
-            "roomcode" => '123456',
+            "roomcode" => '6969',
+            "locatie-id" => '1',
         ]);
     }
 }
