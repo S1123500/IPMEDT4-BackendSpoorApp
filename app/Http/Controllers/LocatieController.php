@@ -18,6 +18,23 @@ class LocatieController extends Controller
 
         return $locatie;
     }
+
+    public function store(Request $request, Locatie $locatie){
+        $locatie->name = $request->input('name');
+        $locatie->coordinaten = $request->input('coordinaten');
+		$locatie->beschrijving = $request->input('beschrijving');	
+        
+
+        // die($locatie);
+        // return $locatie;
+			
+        try{
+            $locatie->save();
+        }
+		catch(Exception $e){
+			return redirect('insert')->with('failed',"operation failed");
+		}
+    }
 }
 
 // toon: naam, beschrijving, foto, coordinaten

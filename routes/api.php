@@ -26,6 +26,8 @@ Route::get('/', function () {
     return view('form');
 });
 
+Route::post('/locatie','App\Http\Controllers\LocatieController@store');
+
 Route::get('/insert','App\Http\Controllers\InsertController@insert');
 Route::post('/create','App\Http\Controllers\InsertController@create');
 
