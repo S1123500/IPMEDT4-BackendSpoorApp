@@ -9,32 +9,33 @@ class LocatieController extends Controller
 {
     public function show($id){
         $locatie = Locatie::where('id','=', $id)->first();
-
         return $locatie;
     }
 
     public function index(){
         $locatie = Locatie::all();
-
         return $locatie;
     }
 
-    public function store(Request $request, Locatie $locatie){
-        $locatie->name = $request->input('name');
-        $locatie->coordinaten = $request->input('coordinaten');
-		$locatie->beschrijving = $request->input('beschrijving');	
-        
+    // public function store(Request $request, Locatie $locatie) {
+    //     $locatie->name = $request->input["name"];
+    //     $locatie->beschrijving = $request->input["beschrijving"];
+    //     $locatie->coordinaten = $request->input["coordinaten"];
+    
+    //     $locatie->save();
+    // }
+    // public function store(Request $request) {
+    //     $locatie = new Locatie;
+    //     return $request->input;
+    // }
 
-        // die($locatie);
-        // return $locatie;
-			
-        try{
-            $locatie->save();
-        }
-		catch(Exception $e){
-			return redirect('insert')->with('failed',"operation failed");
-		}
+    public function store(Request $request, Locatie $locatie) {
+        $locatie->name = $request->input("name");
+        // $locatie->beschrijving = $request->input("beschrijving");
+        // $locatie->coordinaten = $request->input("coordinaten");
+        $locatie->save();
     }
+
 }
 
 // toon: naam, beschrijving, foto, coordinaten

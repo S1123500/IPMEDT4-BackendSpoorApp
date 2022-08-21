@@ -18,7 +18,7 @@ class CreateLocatieTable extends Migration
             $table->string('name');
             $table->json('coordinaten');
             $table->string('beschrijving');
-            $table->boolean('gehaald')->default(0);
+            // $table->boolean('gehaald')->default(0);
         });
     }
 
