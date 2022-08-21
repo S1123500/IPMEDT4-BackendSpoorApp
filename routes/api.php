@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+Route::post('/locaties','App\Http\Controllers\LocatieController@store');
 
 Route::get('/locaties','\App\Http\Controllers\LocatieController@index');
 Route::get('/spelers','\App\Http\Controllers\SpelerController@index');
@@ -25,8 +26,6 @@ Route::get('/speler/{name}','\App\Http\Controllers\SpelerController@show');
 Route::get('/', function () {
     return view('form');
 });
-
-Route::post('/locaties','App\Http\Controllers\LocatieController@store');
 
 Route::get('/insert','App\Http\Controllers\InsertController@insert');
 Route::post('/create','App\Http\Controllers\InsertController@create');
